@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MMMU</title>
+    <title>MMKE-Bench</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta name="description"
-          content="A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI">
-    <meta name="keywords" content="MMMU, LMM, LMM Evaluation, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
+          content="A Multimodal Editing Benchmark for Diverse Visual Knowledge">
+    <meta name="keywords" content="MMKE-Bench, LMM, LMM Evaluation, Vision Language Model, Large Language Model, Large Multimodal Model, artificial intelligence, AI, AGI, artificial general intelligence">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI</title>
+    <title> MMKE-Bench:  A Multimodal Editing Benchmark for Diverse Visual Knowledge</title>
 
-    <link rel="icon" href="./static/images/mmmu_icon2.png">
+    <link rel="icon" href="./static/images/MMKE-Bench-logo.png">
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -31,41 +31,6 @@
   </head>
   <body>
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="navbar-menu">
-        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              More Research
-            </a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item" href="https://huggingface.co/datasets/MMMU/MMMU_Pro">
-                <b>MMMU-Pro</b> <span style="font-size:18px; display: inline; margin-left: 5px;">🔥</span>
-              </a>
-              <a class="navbar-item" href="https://tiger-ai-lab.github.io/MAmmoTH/">
-                MAmmoTH
-              </a>
-              <a class="navbar-item" href="https://osu-nlp-group.github.io/TableLlama/">
-                TableLlama
-              </a>
-              <a class="navbar-item" href="https://osu-nlp-group.github.io/MagicBrush/">
-                MagicBrush
-              </a>
-              <a class="navbar-item" href="https://osu-nlp-group.github.io/Mind2Web/">
-                Mind2Web
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
 
     <section class="hero">
       <div class="hero-body">
@@ -73,94 +38,132 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title is-bold">
-                <img src="static/images/mmmu_icon2.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-                <span class="mmmu" style="vertical-align: middle">MMMU</span>
+                <img src="static\images\MMKE\MMKE-Bench-logo.png" style="width:2em; vertical-align: middle" alt="Logo"/>
+
+                <span class="MMKE-Bench" style="vertical-align: middle; color: #8B0000;">MMKE-Bench</span>
+
               </h1>
-              <h2 class="subtitle is-3 publication-subtitle">
-                A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI
+              <h2 class="subtitle is-3 publication-subtitle" style=" color: black;">
+                A Multimodal Editing Benchmark for Diverse Visual Knowledge
               </h2>
+              <style>
+                /* 定义不同颜色的样式，确保优先级足够高，并加粗 */
+                .publication-authors .author-block a.red-brown {
+                  color: #8B0000 !important; /* 棕红色 */
+                  font-weight: bold; /* 加粗 */
+                }
+                .publication-authors .author-block a.blue {
+                  color: #0000FF !important; /* 蓝色 */
+                  font-weight: bold; /* 加粗 */
+                }
+                .publication-authors .author-block a.orange {
+                  color: #FF8C00 !important; /* 橙色 */
+                  font-weight: bold; /* 加粗 */
+                }
+                .publication-authors .author-block a.green {
+                  color: #00AA00 !important; /* 绿色 */
+                  font-weight: bold; /* 加粗 */
+                }
+              
+                /* 定义三角形图标的颜色，并加粗 */
+                .triangle-bigai::before {
+                  content: "▶";
+                  color: #8B0000; /* 棕红色 */
+                  margin-right: 5px;
+                  font-weight: bold; /* 加粗 */
+                }
+                .triangle-ustc::before {
+                  content: "▶";
+                  color: #0000FF; /* 蓝色 */
+                  margin-right: 5px;
+                  font-weight: bold; /* 加粗 */
+                }
+                .triangle-pku::before {
+                  content: "▶";
+                  color: #FF8C00; /* 橙色 */
+                  margin-right: 5px;
+                  font-weight: bold; /* 加粗 */
+                }
+                .triangle-bit::before {
+                  content: "▶";
+                  color: #00AA00; /* 绿色 */
+                  margin-right: 5px;
+                  font-weight: bold; /* 加粗 */
+                }
+              
+                /* 确保学校名称和作者列表加粗 */
+                .publication-authors .author-block {
+                  font-weight: bold; /* 加粗整个块 */
+                }
+              
+                /* 增加学校之间的间隔 */
+                .publication-authors .author-block + .author-block {
+                  margin-left: 20px; /* 每个学校之间的间隔 */
+                }
+              </style>
+              
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="https://xiangyue9607.github.io/" style="text-decoration: none; color: inherit;">Xiang Yue*<sup style="color:#6fbf73;">†,1</sup></a>,
+                  <a href="https://yuntaodu.github.io/" class="red-brown">Yuntao Du*</a><sup> 1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://yuanshengni.github.io/" style="text-decoration: none; color: inherit;">Yuansheng Ni*<sup style="color:#ffac33;">2</sup></a>,
+                  <a href="https://kailinjiang.github.io/" class="blue">Kailin Jiang*</a><sup> 2,1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://drogozhang.github.io/" style="text-decoration: none; color: inherit;">Kai Zhang*<sup style="color:#ed4b82;">3</sup></a>,
-                </span>
-                <span class="author-block">Tianyu Zheng*<sup style="color:#007bff;">4</sup>,</span><br>
-                <span class="author-block">Ruoqi Liu<sup style="color:#ed4b82;">3</sup>,</span>
-                <span class="author-block">Ge Zhang<sup style="color:#ffac33;">2</sup>,</span>
-                <span class="author-block">Samuel Stevens<sup style="color:#ed4b82;">3</sup>,</span>
-                <span class="author-block">Dongfu Jiang<sup style="color:#ffac33;">2</sup>,</span>
-                <span class="author-block">Weiming Ren<sup style="color:#ffac33;">2</sup>,</span>
-                <span class="author-block">Yuxuan Sun<sup style="color:#007bff;">4</sup>,</span>
-                <span class="author-block">Cong Wei<sup style="color:#ffac33;">2</sup>,</span>
-                <span class="author-block">Botao Yu<sup style="color:#ed4b82;">3</sup>,</span>
-                <span class="author-block">Ruibin Yuan<sup style="color:#ffac33;">5</sup>,</span>
-                <span class="author-block">Renliang Sun<sup style="color:#ffac33;">2</sup>,</span>
-                <span class="author-block">Ming Yin<sup style="color:#9b51e0;">7</sup>,</span>
-                <span class="author-block">Boyuan Zheng<sup style="color:#ed4b82;">3</sup>,</span>
-                <span class="author-block">Zhenzhu Yang<sup style="color:#007bff;">4</sup>,</span>
-                <span class="author-block">Yibo Liu<sup style="color:#ed4b82;">6</sup>,</span>
-                <span class="author-block">Wenhao Huang<sup style="color:#007bff;">4</sup>,</span><br>
-                <span class="author-block">
-                  <a href="https://web.cse.ohio-state.edu/~sun.397/" style="text-decoration: none; color: inherit;">Huan Sun*<sup style="color:#ed4b82;">3</sup></a>,
+                  <a href="https://zhigao2017.github.io/" class="orange">Zhi Gao</a><sup> 3,1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://ysu1989.github.io/" style="text-decoration: none; color: inherit;">Yu Su*<sup style="color:#ed4b82;">†,3</sup></a>,
+                  <a href="https://scholar.google.com/citations?user=DSN0fGIAAAAJ&hl=en" class="green">Chenrui Shi</a><sup> 4,1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://wenhuchen.github.io/" style="text-decoration: none; color: inherit;">Wenhu Chen*<sup style="color:#ffac33;">†,2</sup></a>
+                  <a href="https://zilongzheng.github.io/" class="red-brown">Zilong Zheng</a><sup> 1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://siyuanqi.github.io/" class="red-brown">Siyuan Qi</a><sup> 1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://liqing.io" class="red-brown">Qing Li</a><sup>1&#x1f4e7;</sup>
                 </span>
               </div>
-
-              <br>
-
+              
               <div class="is-size-5 publication-authors">
-                <span class="author-block"><sup style="color:#6fbf73;">1</sup>IN.AI Research,</span>
-                <span class="author-block"><sup style="color:#ffac33;">2</sup>University of Waterloo,</span>
-                <span class="author-block"><sup style="color:#ed4b82;">3</sup>The Ohio State University,</span>
-                <span class="author-block"><sup style="color:#007bff;">4</sup>Independent,</span><br>
-                <span class="author-block"><sup style="color:#ffac33;">5</sup>Carnegie Mellon University,</span>
-                <span class="author-block"><sup style="color:#ed4b82;">6</sup>University of Victoria,</span>
-                <span class="author-block"><sup style="color:#9b51e0;">7</sup>Princeton University</span>
+                <span class="author-block triangle-bigai"><sup>1 </sup>BIGAI</span>
+                <span class="author-block triangle-ustc"><sup>2 </sup>USTC</span>
+                <span class="author-block triangle-pku"><sup>3 </sup>PKU</span>
+                <span class="author-block triangle-bit"><sup>4 </sup>BIT</span>
               </div>
 
               <br>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">*Core Contributors</span><br>
                 <span class="author-block">†Corresponding to:</span>
-                <span class="author-block"><a href="mailto:xiangyue.work@gmail.com">xiangyue.work@gmail.com</a>,</span>
-                <span class="author-block"><a href="mailto:su.809@osu.edu">su.809@osu.edu</a>,</span>
-                <span class="author-block"><a href="mailto:wenhuchen@uwaterloo.ca">wenhuchen@uwaterloo.ca</a></span>
+                <span class="author-block"><a href="liqing@bigai.ai">liqing@bigai.ai</a></span>
               </div>
 
               <div class="column has-text-centered">
                 <div class="publication-links">
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2311.16502" class="external-link button is-normal is-rounded is-dark">
+                  <span class="link-block" style="margin-right: 10px;">
+                    <a href="" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
                       <span>arXiv</span>
                     </a>
                   </span>
-                  <span class="link-block">
-                    <a href="https://huggingface.co/datasets/MMMU/MMMU_Pro" class="external-link button is-normal is-rounded is-dark">
+                  <span class="link-block" style="margin-right: 10px;">
+                    <a href="" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon" style="font-size:18px">🤗</span>
-                      <span>MMMU-Pro</span>
+                      <span>MMKE-Bench-Dataset</span>
                     </a>
                   </span>
-                  <span class="link-block">
+                  <span class="link-block" style="margin-right: 10px;">
                     <a href="https://huggingface.co/datasets/MMMU/MMMU" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon" style="font-size:18px">🤗</span>
-                      <span>MMMU</span>
+                      <span>MMKE-Bench-Model</span>
                     </a>
                   </span>
-                  <span class="link-block">
-                    <a href="https://github.com/MMMU-Benchmark/MMMU" class="external-link button is-normal is-rounded is-dark">
+                  <span class="link-block" style="margin-right: 10px;">
+                    <a href="" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fab fa-github"></i>
                       </span>
@@ -168,35 +171,11 @@
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                    <a href="static/Slides/MMKE-Bench.pdf" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon has-text-white">
-                        <i class="fa-solid fa-trophy"></i>
+                        <i class="fas fa-file-pdf"></i>
                       </span>
-                      <span>Leaderboard</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="https://eval.ai/web/challenges/challenge-page/2179/overview" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon has-text-white">
-                        <i class="fa-solid fa-medal"></i>
-                      </span>
-                      <span>EvalAI</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="https://twitter.com/xiangyue96/status/1729698316554801358" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon has-text-white">
-                        <i class="fa-brands fa-x-twitter"></i>
-                      </span>
-                      <span>Twitter</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="#examples" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon has-text-white">
-                        <i class="fa-solid fa-book"></i>
-                      </span>
-                      <span>Examples</span>
+                      <span>Slides</span>
                     </a>
                   </span>
                 </div>
@@ -208,437 +187,269 @@
     </section>
 
     <section class="hero teaser">
-      <div class="container is-max-desktop has-text-centered">
-        <img src="static/images/overview_mmlu.Jpeg" alt="geometric reasoning">
-        <p>Overview of the MMMU dataset. MMMU presents four challenges:
-          1) <b>comprehensiveness</b>: 11.5K college-level problems across six broad disciplines and 30 college subjects;
-          2) highly <b>heterogeneous</b> image types;
-          3) <b>interleaved</b> text and images;
-          4) <b>expert-level</b> perception and reasoning rooted in deep subject knowledge.
+      <div class="container is-max-desktop"> <!-- Text alignment defaults to left -->
+        <p style="font-size: 1.2em; text-align: left;"> <!-- Text aligned to the left and font size increased -->
+          <b>TL;DR:</b> We propose <span style="color: #8B0000; font-weight: bold;">MMKE-Bench</span>,
+          a challenging benchmark for evaluating diverse semantic editing in real-world scenarios.
         </p>
+        <img src="static/images/MMKE/fig1.jpg" alt="geometric reasoning">
       </div>
     </section>
-
-    <section class="section">
-      <div class="container" style="margin-bottom: 2vh;">
-        <!-- Abstract. -->
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">🔔News</h2>
-            <div class="content has-text-justified">
-              <p>
-                <b>🔥[2024-09-05] Introducing <a href="https://arxiv.org/abs/2409.02813">MMMU-Pro</a>, a robust version of MMMU benchmark for multimodal AI evaluation! 🚀</b>
-              </p>
-              <p>
-                <b>🚀[2024-01-31]: We added Human Expert performance on the <a href="#leaderboard">Leaderboard</a>!🌟</b>
-              </p>
-              <p>
-                <b>🔥[2023-12-04]: Our evaluation server for the test set is now available on <a href="https://eval.ai/web/challenges/challenge-page/2179/overview"><b>EvalAI</b></a>. We welcome all submissions and look forward to your participation! 😆</b>
-              </p>
-          </div>
-            <h2 class="title is-3">Introduction</h2>
-            <div class="content has-text-justified">
-              <p>
-                We introduce MMMU: a new benchmark designed to evaluate multimodal models on massive multi-discipline tasks demanding college-level subject knowledge and deliberate reasoning. MMMU includes <b>11.5K</b> meticulously collected multimodal questions from college exams, quizzes, and textbooks, covering six core disciplines: Art & Design, Business, Science, Health & Medicine, Humanities & Social Science, and Tech & Engineering. These questions span <b>30</b> subjects and <b>183</b> subfields, comprising 30 highly heterogeneous image types, such as charts, diagrams, maps, tables, music sheets, and chemical structures. Unlike existing benchmarks, MMMU focuses on advanced perception and reasoning with domain-specific knowledge, challenging models to perform tasks akin to those faced by experts. Our evaluation of 14 open-source LMMs and the proprietary GPT-4V(ision) highlights the substantial challenges posed by MMMU. Even the advanced GPT-4V only achieves a 56% accuracy, indicating significant room for improvement. We believe MMMU will stimulate the community to build next-generation multimodal foundation models towards expert artificial general intelligence.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!--/ Abstract. -->
-    </div>
+    
+    
+    
+    
+    <section class="hero teaser">
+      <div class="container is-max-desktop"> <!-- Removed has-text-centered to default to left-aligned text -->
+        <p>
+          <span style="font-weight: bold; color: black;">Overview</span> of the 
+          <span style="color: #8B0000; font-weight: bold;">MMKE-Bench</span> dataset. Our contribution can be summarized as follows:
+        </p>        
+        <p><b>1) Overview of MMKE-Bench:</b> MMKE-Bench is introduced as a benchmark designed to test semantic editing capabilities in realistic scenarios. It utilizes natural language for knowledge representation and includes three editing types aligned with practical contexts.</p>
+        <p><b>2) Development of the Benchmark Pipeline:</b> Describes the novel pipeline used to develop the benchmark, which includes collecting original knowledge, generating editable knowledge, and crafting evaluation questions based on specific principles.</p>
+        <p><b>3) Experimental Analysis and Challenges:</b> Details extensive experiments with various standard methods and large language models, highlighting several limitations in the existing approaches to knowledge editing in both single and multiple edit scenarios.</p>
+      </div>
     </section>
+    
 
-    <!-- DATASET SECTION -->
+  
     <section class="hero is-light is-small">
       <div class="hero-body has-text-centered">
-        <h1 class="title is-1 mmmu">
-          <img src="static/images/mmmu_icon2.png" alt="Logo" class="mmmu-logo"/>
-          <span class="mmmu">MMMU Benchmark</span>
+        <h1 class="title is-1 MMKE">
+          <img src="static/images/MMKE/MMKE-Bench-logo.png" alt="Logo" class="MMKE-logo" style="width: 5%; height: auto; vertical-align: middle;"/> <!-- Adjusted width to 30% and added vertical alignment -->
+          <span class="MMKE" style="vertical-align: middle;">MMMKE-Bench</span>
         </h1>
       </div>
     </section>
+    
+    
 
     <section class="section">
       <div class="container">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Overview</h2>
-            <div class="content has-text-justified">
-              <p>
-                We introduce the Massive Multi-discipline Multimodal Understanding and Reasoning (MMMU) benchmark, a novel benchmark meticulously curated to assess the expert-level multimodal understanding capability of foundation models across a broad scope of tasks. Covering subjects across disciplines, including Art, Business, Health & Medicine, Science, Humanities & Social Science, and Tech & Engineering, and over subfields. The detailed subject coverage and statistics are detailed in the figure. The questions in our benchmark were manually collected by a team of college students (including coauthors) from various disciplines and subjects, drawing from online sources, textbooks, and lecture materials.
-              </p>
-              <img src="static/images/mmlu_example.Jpeg" alt="algebraic reasoning" class="center">
-              <br>
-              <p>
-                 MMMU is designed to measure three essential skills in LMMs: perception, knowledge, and reasoning. Our aim is to evaluate how well these models can not only perceive and understand information across different modalities but also apply reasoning with subject-specific knowledge to derive the solution.
-              </p>
-              <p>
-                Our MMMU benchmark introduces key challenges to multimodal foundation models, as detailed in a figure. Among these, we particularly highlight the challenge stemming from the requirement for both expert-level visual perceptual abilities and deliberate reasoning with subject-specific knowledge. This challenge is vividly illustrated through our tasks, which not only demand the processing of various heterogeneous image types but also necessitate a model's adeptness in using domain-specific knowledge to deeply understand both the text and images and to reason. This goes significantly beyond basic visual perception, calling for an advanced approach that integrates advanced multimodal analysis with domain-specific knowledge.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Comparisons with Existing Benchmarks</h2>
-            <div class="content has-text-justified">
-              <p>
-                To further distinguish the difference between <i>dataset</i> and other existing ones, we elaborate the benchmark details in Figure.
-                From the <i>breadth</i> perspective, the prior benchmarks are heavily focused on daily knowledge and common sense.
-                The covered image format is also limited. Our benchmark aims to cover college-level knowledge with 30 image formats including diagrams,
-                tables, charts, chemical structures, photos, paintings, geometric shapes, music sheets, medical images, etc.
-                In the <i>depth</i> aspect, the previous benchmarks normally require commonsense knowledge or simple physical or temporal reasoning.
-                In contrast, our benchmark requires deliberate reasoning with college-level subject knowledge.
-              </p>
-              <div class="content has-text-centered">
-                <img src="static/images/compare.Jpeg" alt="algebraic reasoning" class="center">
-                <p> Sampled MMMU examples from each discipline. The questions and images need expert-level knowledge to understand and reason.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <!-- Statistics -->
         <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
             <h2 class="title is-3">Statistics</h2>
             <div class="carousel results-carousel">
               <div class="box m-5">
                 <div class="content has-text-centered">
-                  <img src="static/images/mmmu_subject_distribution.Jpeg" alt="algebraic reasoning" width="95%"/>
-                  <p> Sampled MMMU examples from each discipline. The questions and images need expert-level knowledge to understand and reason.</p>
+                  <img src="static\images\MMKE\sunburst_chart_v1.png" alt="algebraic reasoning" width="40%"/>
+                  <p> Figure 1. The types of samples in MMKE-Bench.</p>
                 </div>
               </div>
               <div class="box m-5">
                 <div class="content has-text-centered">
-                  <img src="static/images/statistics.png" alt="arithmetic reasoning" width="40%"/>
-                  <p> Key statistics of the MMMU benchmark</p>
+                  <img src="static\images\MMKE\statis.png" alt="arithmetic reasoning" width="85%"/>
+                  <p> Table 1. The statistics of MMKE-Bench.</p>
                 </div>
               </div>
               <div class="box m-5">
                 <div class="content has-text-centered">
-                  <img src="static/images/image_type_count.png" alt="arithmetic reasoning" width="80%"/>
-                  <p> Distribution of image types in the MMMU dataset</p>
+                  <img src="static\images\MMKE\tabel1.png" alt="arithmetic reasoning" width="95%"/>
+                  <p> Table 2. Overall comparison with existing multimodal knowledge editing benchmarks.</p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
-      </div>
+    
+        <!-- Overview -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method</h2>
+            <div class="content has-text-justified">
+              <p>
+                We construct the benchmark through four steps: i) Original Knowledge Collection; ii) Editing Knowledge Generation; iii) Evaluation Question Generation; and iv) Human Verification.
+              </p>
+
+              <!-- New section below the original text -->
+              <h3 class="title is-4" style="text-align: center;">Original Knowledge Collection</h3>
+              <p>
+                In gathering original knowledge, we first list candidate fine-grained entities, visual semantics, or user-specific items, and then collect their corresponding images and descriptions.
+                For visual entity editing, we source candidates from two datasets: the multimodal knowledge graph, MMpedia, and the visual entity recognition dataset, OVEN. For visual semantic editing, we define the candidates across 14
+                broad categories of semantic knowledge, including single-person behaviors, single-object behaviors or attributes, object relationships, and global structures. For user-specific editing, we consider 9 broad categories of personalized information sources, such as
+                favorite singers, owned pets, and alma maters. The type of the samples is shown in Figure 1.
+              </p>
+
+              <img src="static/images/MMKE/pip_new.jpg" alt="algebraic reasoning" class="center">
+              <br>
+
+              <h3 class="title is-4" style="text-align: center;">Editing Knowledge Generation</h3>
+              <p>
+                Considering the multimodal nature of large multimodal models (LMMs), we propose editing both text and visual modalities when constructing the benchmark. Specifically, we focus on editing visual entities and visual semantic knowledge while leaving user-specific knowledge unchanged. The former is treated as knowledge editing, while the latter is regarded as knowledge insertion.
+                <br>
+                For the visual modality, we follow the image-replacement-based editing approach from previous work, where an image of the entity or semantic action is randomly replaced with another of the same type.  In the text modality, we modify key information about the entity and the rule or meaning into counterfactual content for visual entity editing and visual semantic editing, respectively. Additionally, we update the action description to align with the new visual content.
+              </p>
+
+              <h3 class="title is-4" style="text-align: center;">Evaluation Question Generation</h3>
+              <p>
+                We adhere to four key evaluation principles to generate both the questions and answers, namely Reliability, Locality, Generalization, and Portability. The Reliability question, Generalization question, and Portability question is generated by LLM and Locality question is collected from existing benchmark.
+              </p>
+
+              <h3 class="title is-4" style="text-align: center;">Human Check & Benchmark Statistics</h3>
+              <p>
+                During benchmark construction, we manually collected, reviewed, and filtered the samples multiple times. In the original knowledge collection stage, we conducted a thorough manual review of the images associated with each entity, behavior, and object to ensure the quality of the collected visuals. 
+                Furthermore, after counterfactual editing and question generation, we manually reviewed the questions, revised unsuitable questions, and corrected wrong answers. 
+                <br>
+                The statistics of MMKE-Bench are shown in Tab 1. MMKE-Bench encompasses <b>3</b> classes of edited knowledge, totaling <b>2,940</b> knowledge pieces and <b>7,229</b> images. The knowledge spans <b>110</b> types, highlighting the diversity of MMKE-Bench. We split the dataset into training and validation sets at 4:6, with the training set reserved solely for specific knowledge editing methods(e.g., SERAC and MEND).
+              </p>
+
+
+            </div>
+          </div>
+        </div>
     </section>
+    
 
     <!-- RESULTS SECTION -->
+
     <section class="hero is-light is-small">
       <div class="hero-body has-text-centered">
         <h1 class="title is-1 mmmu">Experiment Results</h1>
       </div>
     </section>
-
+    
     <section class="section">
       <div class="container">
         <!-------------------------------------------------------------------- RESULTS SECTION -------------------------------------------------------------------->
         <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
-            <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
-            <div class="content has-text-justified">
-              <p>
-                We evaluate various models including LLMs and LMMs.
-                In each type, we consider both closed- and open-source models.
-                Our evaluation is conducted under a zero-shot setting to assess the capability of models to generate accurate answers without fine-tuning or few-shot demonstrations on our benchmark.
-                For all models, we use the default prompt provided by each model for multi-choice or open QA, if available.
-                If models do not provide prompts for task types in MMMU, we conduct prompt engineering on the validation set and use the most effective prompt for the later zero-shot experiment.
-              </p>
-            </div>
-            <br>
-            <div class="model-labels-container">
-              <span class="leaderboard-label human_expert">Human Expert</span>
-              <span class="leaderboard-label open_source">Open-Source</span>
-              <span class="leaderboard-label proprietary">Proprietary</span>
-            </div>
-            <br>
-            <div class="content has-text-centered">
-              <p>
-                Click on MMMU-Pro, MMMU (Val) or MMMU (Test) to expand detailed results.
-              </p>
-            </div>
-            <div class="leaderboard-container">
-              <div class="table-wrapper">
-                <table id="mmmu-table">
-                  <thead>
-                    <tr>
-                      <th colspan="3" class="reset-cell clickable" style="text-align: center;">Reset</th>
-                      <th class="pro-details-cell clickable" colspan="1">MMMU-Pro</th>
-                      <th class="val-details-cell clickable" colspan="1">MMMU(Val)</th>
-                      <th class="test-details-cell clickable" colspan="1">MMMU(Test)</th>
-                    </tr>
-                    <tr>
-                      <th class="sortable clickable" data-sort="string">Name</th>
-                      <th class="clickable" data-sort="string">Size</th>
-                      <th class="sortable clickable" data-sort="date">Date</th>
-                      <th class="sortable clickable pro-overall" data-sort="number">Overall</th>
-                      <th class="hidden pro-details sortable clickable" data-sort="number">Vision</th>
-                      <th class="hidden pro-details sortable clickable" data-sort="number">Standard</th>
-                      <th class="sortable clickable val-overall" data-sort="number">Overall</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Art & Design</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Business</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Science</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Health & Medicine</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Human. & Social Sci.</th>
-                      <th class="hidden val-details sortable clickable" data-sort="number">Tech & Eng.</th>
-                      <th class="sortable clickable test-overall" data-sort="number">Overall</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Art & Design</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Business</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Science</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Health & Medicine</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Human. & Social Sci.</th>
-                      <th class="hidden test-details sortable clickable" data-sort="number">Tech & Eng.</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Table body will be populated dynamically -->
-                  </tbody>
-                </table>
-                <p class="test-desc"> Overall results of different models on the MMMU leaderboard. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
+              <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+              <div class="content has-text-justified">
+                  <p>
+                      We evaluate various models including LLMs and LMMs. In each type, we consider both closed- and open-source models. Our evaluation is conducted under a zero-shot setting to assess the capability of models to generate accurate answers without fine-tuning or few-shot demonstrations on our benchmark.
+                      For all models, we use the default prompt provided by each model for multi-choice or open QA, if available. If models do not provide prompts for task types in MMMU, we conduct prompt engineering on the validation set and use the most effective prompt for the later zero-shot experiment.
+                  </p>
               </div>
-            </div>
-          </div>
-        </div>
-        <!-------------------------------------------------------------------- Image Type SECTION -------------------------------------------------------------------->
-        <div class="columns is-centered m-6">
-          <div class="column is-full has-text-centered content">
-            <h2 class="title is-3">Different Image Types</h2>
-            <div class="content has-text-justified">
-              <p>
-                We compare the performance of various models across top frequent image types.
-                Across all types, GPT-4V consistently outperforms the other models by a huge margin.
-                Open-source models demonstrate relatively strong performance in categories like Photos and Paintings, which are more frequently seen during training.
-                However, for less common image categories like Geometric shapes, Music sheets and Chemical structures, all models obtain very low scores (some are close to random guesses).
-                This indicates that the existing models are generalizing poorly towards these image types.
-              </p>
-            </div>
-            <div class="model-labels-container">
-              <span class="model-label" style="background-color: rgba(196, 123, 160, 0.5);">Adept Fuyu-8B</span>
-              <span class="model-label" style="background-color: rgba(245, 123, 113, 0.5);">Qwen-VL-7B-Chat</span>
-              <span class="model-label" style="background-color: rgba(255, 208, 80, 0.5);">LLaVA-1.5-13B</span>
-              <span class="model-label" style="background-color: rgba(110, 194, 134, 0.5);">InstructBLIP-T5-XXL</span>
-              <span class="model-label" style="background-color: rgba(255, 153, 78, 0.5);">BLIP-2 FLAN-T5-XXL</span>
-              <span class="model-label" style="background-color: rgba(42, 149, 235, 0.5);">Yi-VL-34B</span>
-              <span class="model-label" style="background-color: rgba(183, 156, 220, 0.5);">LLaVA-1.6-34B</span>
-              <span class="model-label" style="background-color: rgba(143, 169, 209, 0.5);">InternVL-Chat-V1.2</span>
-              <span class="model-label" style="background-color: rgba(72, 199, 176, 0.5);">VILA1.5</span>
-              <span class="model-label" style="background-color: rgba(117, 209, 215, 0.5);">GPT-4V</span>
-            </div>
-            <div class="content has-text-centered">
-              <div class="chart-grid">
-                <!-- Chart 1: Diagrams -->
-                <div class="chart-item">
-                    <canvas id="chart_Diagrams"></canvas>
-                    <p class="chart-label">Diagrams (3184)</p>
-                </div>
-                <!-- Chart 2: Tables -->
-                <div class="chart-item">
-                    <canvas id="chart_Tables"></canvas>
-                    <p class="chart-label">Tables (2267)</p>
-                </div>
-                <!-- Chart 3: Plots and Charts -->
-                <div class="chart-item">
-                  <canvas id="chart_PlotsAndCharts"></canvas>
-                  <p class="chart-label">Plots and Charts (840)</p>
-                </div>
-                <!-- Chart 4: Chemical Structures -->
-                <div class="chart-item">
-                  <canvas id="chart_ChemicalStructures"></canvas>
-                  <p class="chart-label">Chemical Structures (573)</p>
-                </div>
-                <!-- Chart 5: Photographs -->
-                <div class="chart-item">
-                  <canvas id="chart_Photographs"></canvas>
-                  <p class="chart-label">Photographs (770)</p>
-                </div>
-                <!-- Chart 6: Paintings -->
-                <div class="chart-item">
-                  <canvas id="chart_Paintings"></canvas>
-                  <p class="chart-label">Paintings (453)</p>
-                </div>
-                <!-- Chart 7: Geometric Shapes -->
-                <div class="chart-item">
-                  <canvas id="chart_GeometricShapes"></canvas>
-                  <p class="chart-label">Geometric Shapes (336)</p>
-                </div>
-                <!-- Chart 8: Sheet Music -->
-                <div class="chart-item">
-                  <canvas id="chart_SheetMusic"></canvas>
-                  <p class="chart-label">Sheet Music (335)</p>
-                </div>
-                <!-- Chart 9: Medical Images -->
-                <div class="chart-item">
-                  <canvas id="chart_MedicalImages"></canvas>
-                  <p class="chart-label">Medical Images (272)</p>
-                </div>
-                <!-- Chart 10: Pathological Images -->
-                <div class="chart-item">
-                  <canvas id="chart_PathologicalImages"></canvas>
-                  <p class="chart-label">Pathological Images (253)</p>
-                </div>
-                <!-- Chart 11: Microscopic Images -->
-                <div class="chart-item">
-                  <canvas id="chart_MicroscopicImages"></canvas>
-                  <p class="chart-label">Microscopic Images (226)</p>
-                </div>
-                <!-- Chart 12: MRI, CT scans, and X-rays -->
-                <div class="chart-item">
-                  <canvas id="chart_MRIsCTScansXrays"></canvas>
-                  <p class="chart-label">MRI, CT scans, and X-rays (198)</p>
-                </div>
-                <!-- Chart 13: Sketches and Drafts -->
-                <div class="chart-item">
-                  <canvas id="chart_SketchesAndDrafts"></canvas>
-                  <p class="chart-label">Sketches and Drafts (184)</p>
-                </div>
-                <!-- Chart 14: Maps -->
-                <div class="chart-item">
-                  <canvas id="chart_Maps"></canvas>
-                  <p class="chart-label">Maps (170)</p>
-                </div>
-                <!-- Chart 15: Technical Blueprints -->
-                <div class="chart-item">
-                  <canvas id="chart_TechnicalBlueprints"></canvas>
-                  <p class="chart-label">Technical Blueprints (162)</p>
-                </div>
-                <!-- Chart 16: Trees and Graphs -->
-                <div class="chart-item">
-                  <canvas id="chart_TreesAndGraphs"></canvas>
-                  <p class="chart-label">Trees and Graphs (146)</p>
-                </div>
-                <!-- Chart 17: Mathematical Notations -->
-                <div class="chart-item">
-                  <canvas id="chart_MathematicalNotations"></canvas>
-                  <p class="chart-label">Mathematical Notations (133)</p>
-                </div>
-                <!-- Chart 18: Comics and Cartoons -->
-                <div class="chart-item">
-                  <canvas id="chart_ComicsAndCartoons"></canvas>
-                  <p class="chart-label">Comics and Cartoons (131)</p>
-                </div>
-                <!-- Chart 19: Sculpture -->
-                <div class="chart-item">
-                  <canvas id="chart_Sculpture"></canvas>
-                  <p class="chart-label">Sculpture (117)</p>
-                </div>
-                <!-- Chart 20: Portraits -->
-                <div class="chart-item">
-                  <canvas id="chart_Portraits"></canvas>
-                  <p class="chart-label">Portraits (91)</p>
-                </div>
-                <!-- Chart 21: Screenshots -->
-                <div class="chart-item">
-                  <canvas id="chart_Screenshots"></canvas>
-                  <p class="chart-label">Screenshots (70)</p>
-                </div>
-                <!-- Chart 22: Other -->
-                <div class="chart-item">
-                  <canvas id="chart_Other"></canvas>
-                  <p class="chart-label">Other(60)</p>
-                </div>
-                <!-- Chart 23: Poster -->
-                <div class="chart-item">
-                  <canvas id="chart_Poster"></canvas>
-                  <p class="chart-label">Poster(57)</p>
-                </div>
-                <!-- Chart 24: Icons and Symbols -->
-                <div class="chart-item">
-                  <canvas id="chart_IconsAndSymbols"></canvas>
-                  <p class="chart-label">Icons and Symbols (42)</p>
-                </div>
-                <!-- Chart 25: Historical Timelines -->
-                <div class="chart-item">
-                  <canvas id="chart_HistoricalTimelines"></canvas>
-                  <p class="chart-label">Historical Timelines (30)</p>
-                </div>
-                <!-- Chart 26: 3D Renderings -->
-                <div class="chart-item">
-                  <canvas id="chart_3DRenderings"></canvas>
-                  <p class="chart-label">3D Renderings (21)</p>
-                </div>
-                <!-- Chart 27: DNA Sequences -->
-                <div class="chart-item">
-                  <canvas id="chart_DNASequences"></canvas>
-                  <p class="chart-label">DNA Sequences (20)</p>
-                </div>
-                <!-- Chart 28: Landscapes -->
-                <div class="chart-item">
-                  <canvas id="chart_Landscapes"></canvas>
-                  <p class="chart-label">Landscapes (16)</p>
-                </div>
-                <!-- Chart 29: Logos and Branding -->
-                <div class="chart-item">
-                  <canvas id="chart_LogosAndBranding"></canvas>
-                  <p class="chart-label">Logos and Branding(14)</p>
-                </div>
-                <!-- Chart 30: Advertisements -->
-                <div class="chart-item">
-                  <canvas id="chart_Advertisements"></canvas>
-                  <p class="chart-label">Advertisements (10)</p>
-                </div>
+              <br>
+              <div class="content has-text-centered">
+                  <p>
+                      Click on MMMU-Pro, MMMU (Val) or MMMU (Test) to expand detailed results.
+                  </p>
               </div>
-              <p class="bottom-text"> Selected models' performance on 30 different image types. Note that a single image may have multiple image types.</p>
-            </div>
+              <div class="leaderboard-container">
+                  <div class="table-wrapper">
+                      <table id="mmmu-table" style="width: 100%; border-collapse: collapse;">
+                          <thead>
+                              <tr>
+                                  <th>Model Name</th>
+                                  <th class="sortable clickable" data-sort="number">Core</th>
+                                  <th class="sortable clickable" data-sort="number">Open-ended</th>
+                                  <th class="sortable clickable" data-sort="number">Overall</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr class="proprietary">
+                                  <td>GPT-4o (0513)</td>
+                                  <td>0.5223</td>
+                                  <td>0.6654</td>
+                                  <td>0.5410</td>
+                              </tr>
+                              <tr class="proprietary">
+                                  <td>Claude-3.5-Sonnet</td>
+                                  <td>0.4985</td>
+                                  <td>0.6570</td>
+                                  <td>0.5197</td>
+                              </tr>
+                              <tr class="proprietary">
+                                  <td>Gemini-1.5-Pro-002</td>
+                                  <td>0.4757</td>
+                                  <td>0.6105</td>
+                                  <td>0.4948</td>
+                              </tr>
+                              <tr class="proprietary">
+                                  <td>Qwen2-VL-72B</td>
+                                  <td>0.4569</td>
+                                  <td>0.5835</td>
+                                  <td>0.4755</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>Gemini-1.5-Flash-002</td>
+                                  <td>0.4122</td>
+                                  <td>0.5988</td>
+                                  <td>0.4378</td>
+                              </tr>
+                              <tr class="proprietary">
+                                  <td>GPT-4O Mini</td>
+                                  <td>0.4038</td>
+                                  <td>0.6133</td>
+                                  <td>0.4302</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>InternVL2-Llama3-76B</td>
+                                  <td>0.3504</td>
+                                  <td>0.5421</td>
+                                  <td>0.3765</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>Qwen2-VL-7B</td>
+                                  <td>0.3434</td>
+                                  <td>0.4551</td>
+                                  <td>0.3591</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>LLaVA-OneVision-72B</td>
+                                  <td>0.3174</td>
+                                  <td>0.4850</td>
+                                  <td>0.3377</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>Pixtral 12B</td>
+                                  <td>0.3152</td>
+                                  <td>0.4871</td>
+                                  <td>0.3364</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>InternVL2-8B</td>
+                                  <td>0.2543</td>
+                                  <td>0.4109</td>
+                                  <td>0.2771</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>Phi-3.5-Vision</td>
+                                  <td>0.2293</td>
+                                  <td>0.4246</td>
+                                  <td>0.2533</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>MiniCPM-V2.6</td>
+                                  <td>0.2251</td>
+                                  <td>0.4345</td>
+                                  <td>0.2532</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>LLaVA-OneVision-7B</td>
+                                  <td>0.2222</td>
+                                  <td>0.3647</td>
+                                  <td>0.2388</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>Llama-3.2-11B</td>
+                                  <td>0.1579</td>
+                                  <td>0.3488</td>
+                                  <td>0.1801</td>
+                              </tr>
+                              <tr class="open-source">
+                                  <td>Idefics3-8B-Llama3</td>
+                                  <td>0.1120</td>
+                                  <td>0.3565</td>
+                                  <td>0.1382</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <p class="test-desc">Overall results of different models on the benchmark leaderboard. The best-performing model in each category is <b>in-bold</b>, and the second best is <u>underlined</u>. *: results provided by the authors.</p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <!-------------------------------------------------------------------- Difficulty Levels SECTION -------------------------------------------------------------------->
-        <div class="columns is-centered m-6">
-          <div class="column is-full has-text-centered content">
-            <h2 class="title is-3">Different Difficulty Levels</h2>
-            <div class="content has-text-justified">
-              <p>
-                we compares the performance of selected models across three difficulty levels.
-                GPT-4V demonstrates a significantly higher proficiency, with a success rate of 76.1%, compared to opensource models in the “Easy” category.
-                When it comes to the “Medium” category, while the gap narrows, GPT-4V still leads at 55.6%.
-                The further diminishing performance gap in the “Hard” category across models indicates that as the complexity of tasks increases, the advantage of more advanced models like GPT-4V almost disappears.
-                This might reflect a current limitation in handling expert-level challenging queries even for the most advanced models.
-              </p>
-            </div>
-            <div class="content has-text-centered">
-              <p>Click legend to switch the comparison chart.</p>
-            </div>
-            <div class="content has-text-centered">
-              <canvas id="difficulty_level_chart"></canvas>
-              <p>Result decomposition across question difficulty levels.</p>
-            </div>
-          </div>
-        </div>
-      <!-------------------------------------------------------------------- Single VS Multiple image SECTION -------------------------------------------------------------------->
-        <div class="columns is-centered m-6">
-        <div class="column is-full has-text-centered content">
-          <h2 class="title is-3">Single Image VS Multiple Image</h2>
-          <div class="content has-text-centered">
-            <div class="content has-text-centered">
-              <p>Click legend to switch the comparison chart.</p>
-            </div>
-            <canvas id="single_vs_multiple_chart"></canvas>
-            <p>Result decomposition across single image and multiple image tasks.</p>
-          </div>
-        </div>
-        </div>
-      <!-------------------------------------------------------------------- Error Analysis SECTION -------------------------------------------------------------------->
-        <div class="columns is-centered m-6">
-          <div class="column is-full has-text-centered content">
-            <h2 class="title is-3">Error Analysis</h2>
-            <div class="content has-text-justified">
-              <p>
-                We delve into the analysis of errors by GPT-4V, a pivotal aspect for understanding its operational capabilities and limitations.
-                This analysis serves not only to identify the model's current shortcomings but also to guide future enhancements in its design and training.
-                We meticulously examine 150 randomly sampled error instances from GPT-4V's predictions.
-                These instances are analyzed by expert annotators who identify the root causes of mispredictions based on their knowledge and the golden explanations if available.
-                The distribution of these errors is illustrated in Figure, and a selection of 100 notable cases, along with detailed analyses, is included in the Appendix.
-              </p>
-            </div>
-            <div class="content has-text-centered">
-              <img src="static/images/error_distribution_1.Jpeg" alt="error distribution" width="25%">
-              <p> Error distribution over 150 annotated GPT-4V errors.</p>
-            </div>
-          </div>
-        </div>
+      </div>
+    </section>
+    
+
+    
+    
+
+      </section>
       <!-------------------------------------------------------------------- Error Example  -------------------------------------------------------------------->
         <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
@@ -1103,11 +914,10 @@
       <div class="container is-max-desktop content">
         <h2 class="title is-3 has-text-centered">BibTeX</h2>
         <pre><code>
-          @inproceedings{yue2023mmmu,
-            title={MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI},
-            author={Xiang Yue and Yuansheng Ni and Kai Zhang and Tianyu Zheng and Ruoqi Liu and Ge Zhang and Samuel Stevens and Dongfu Jiang and Weiming Ren and Yuxuan Sun and Cong Wei and Botao Yu and Ruibin Yuan and Renliang Sun and Ming Yin and Boyuan Zheng and Zhenzhu Yang and Yibo Liu and Wenhao Huang and Huan Sun and Yu Su and Wenhu Chen},
-            booktitle={Proceedings of CVPR},
-            year={2024},
+          @article{du2024mmke_bench,
+            title = {MMKE-Bench: A Multimodal Editing Benchmark for Diverse Visual Knowledge},
+            author = {Yuntao Du and Kailin Jiang and Zhi Gao and Chenrui Shi and Zilong Zheng and Siyuan Qi and Qing Li},
+            year = {2024}
           }
     </code></pre>
       </div>
@@ -1118,7 +928,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This website is website adapted from <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+              This website is website adapted from <a href="https://mmmu-benchmark.github.io/">MMMU</a> , licensed under a <a rel="license"
                                                   href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
               Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
