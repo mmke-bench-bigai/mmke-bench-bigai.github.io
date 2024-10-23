@@ -363,9 +363,22 @@
       .highlight { background-color: #D6D7E5; }
   
       /* 新增样式   CD5C5C*/
-      .LLaVA-text { color: black; }
-      .MiniGPT-text { color: #CD5C5C; }
-      .BLIP2-text { color: #800000; }
+
+
+      .LLaVA-text { 
+    color: black; 
+    font-weight: bold; /* 黑色加粗 */
+}
+
+      .MiniGPT-text { 
+    color: blue;  /* 修改为蓝色 */
+    font-weight: bold; /* 蓝色加粗 */
+}
+
+      .BLIP2-text { 
+    color: gray; /* 修改为灰色 */
+    font-weight: bold; /* 灰色加粗 */
+}
 
   </style>
   </head>
@@ -1272,11 +1285,11 @@
             const modelNameCell = row.cells[0]; // 获取模型名称列
   
             if (modelNameCell.innerText === 'LLaVA-1.5') {
-                row.classList.add('LLaVA-text'); // 红色应用到整行
+              modelNameCell.classList.add('LLaVA-text'); // 红色应用到整行
             } else if (modelNameCell.innerText === 'MiniGPT-4') {
-                row.classList.add('MiniGPT-text'); // 紫色应用到整行
+              modelNameCell.classList.add('MiniGPT-text'); // 紫色应用到整行
             } else if (modelNameCell.innerText === 'BLIP2-OPT') {
-                row.classList.add('BLIP2-text'); // 紫色应用到整行
+              modelNameCell.classList.add('BLIP2-text'); // 紫色应用到整行
             }
         });
     }
