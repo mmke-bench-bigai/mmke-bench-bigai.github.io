@@ -353,11 +353,11 @@
           font-weight: normal;
           cursor: pointer;
       }
-      .visual-entity-editing { background-color: #E3F2FD; color: #000; }
-      .visual-semantic-editing { background-color: #E8F5E9; color: #000; }
-      .user-specific-editing { background-color: #FFFDE7; color: #000; }
-      .average { background-color: #FFEBEE; color: #000; }
-      .showall { background-color: #F3E5F5; color: #000; }
+      .visual-entity-editing { background-color: #F1FAFB; color: #000; }  /* #E3F2FD*/
+      .visual-semantic-editing { background-color: #E8F5E9; color: #000; } /* #E8F5E9*/
+      .user-specific-editing { background-color: #FFF8E5; color: #000; } /* #FFFDE7*/
+      .average { background-color: #F9F2F8; color: #000; }  /* #FFEBEE*/
+      .showall { background-color: #F3E5F5; color: #000; }  /* #F3E5F5*/
       table {
           width: 900px;
           margin: 20px auto;
@@ -367,10 +367,10 @@
       }
       th, td { padding: 10px; border: 1px solid #ddd; }
       th { background-color: #f5f5f5; font-weight: bold; }
-      .entity-row { background-color: #E3F2FD; }
-      .visual-row { background-color: #E8F5E9; }
-      .user-row { background-color: #FFFDE7; }
-      .average-row { background-color: #FFEBEE; }
+      .entity-row { background-color: #F1FAFB; } /* #E3F2FD*/
+      .visual-row { background-color: #E8F5E9; } /* #E8F5E9*/
+      .user-row { background-color: #FFF8E5; } /* #FFFDE7*/
+      .average-row { background-color: #F9F2F8; } /* #FFEBEE*/
       th:nth-child(4) { text-align: right; }
       .highlight { background-color: #D6D7E5; }
   
@@ -378,17 +378,17 @@
 
 
       .LLaVA-text { 
-    color: black; 
+    color: #72504A; 
     font-weight: bold; /* 黑色加粗 */
 }
 
       .MiniGPT-text { 
-    color: blue;  /* 修改为蓝色 */
+    color: #3273DE;  /* 修改为蓝色 */
     font-weight: bold; /* 蓝色加粗 */
 }
 
       .BLIP2-text { 
-    color: gray; /* 修改为灰色 */
+    color: #B76E79; /* 修改为灰色 */
     font-weight: bold; /* 灰色加粗 */
 }
 
@@ -1233,6 +1233,7 @@
     window.onload = function() {
         showentity();
         applyModelStyles(); // 调用样式应用函数
+        applyTextAndNumberBoldStyles();
     };
   
     function showentity() {
@@ -1305,6 +1306,25 @@
             }
         });
     }
+
+    function applyTextAndNumberBoldStyles() {
+    const rows = document.querySelectorAll('#results-table tbody tr');
+    rows.forEach(row => {
+        // 遍历每一行的所有单元格
+        Array.from(row.cells).forEach(cell => {
+            // 使用正则表达式检测单元格中是否包含数字或英文字母
+            if (/[a-zA-Z0-9]/.test(cell.innerText)) {
+                cell.style.fontWeight = 'bold'; // 应用加粗样式
+            }
+        });
+    });
+}
+// 应用罗马字体到整个表格
+function applyRomanFontToTable() {
+    const table = document.querySelector('#results-table'); // 选择表格
+    table.style.fontFamily = '"Times New Roman", Times, serif'; // 设置字体为罗马字体
+}
+
   </script>
 
     <section class="section" style="padding-top: 0;">
@@ -1356,7 +1376,126 @@
     <section>
       <div class="columns is-centered m-6">
         <div class="column is-full has-text-centered content">
-          <h2 class="title is-3" id="examples">Detailed Behavior Inspection</h2>
+          <h2 class="title is-3" id="examples">Data Example</h2>
+          <div class="content has-text-centered">
+            <p>
+              We provide some examples to inspect the behavior of different models on MEGA-bench. The results include both correct and error cases.
+            </p>
+          </div>
+          <div class="carousel results-carousel">
+            <!-- 使用循环的方式来生成每个图片框 -->
+            <!-- 请确保图片路径正确 -->
+            <!-- 示例：使用伪代码显示 -->
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/1.png" alt="Image 1" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/2.png" alt="Image 2" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/3.png" alt="Image 3" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/4.png" alt="Image 4" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/5.png" alt="Image 5" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/6.png" alt="Image 6" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/7.png" alt="Image 7" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/8.png" alt="Image 8" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/9.png" alt="Image 9" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/10.png" alt="Image 10" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/11.png" alt="Image 11" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/12.png" alt="Image 12" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/13.png" alt="Image 13" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/14.png" alt="Image 14" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/15.png" alt="Image 15" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/16.png" alt="Image 16" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/17.png" alt="Image 17" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/18.png" alt="Image 18" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/19.png" alt="Image 19" width="60%" />
+              </div>
+            </div>
+            <div class="box m-5">
+              <div class="content has-text-centered">
+                <img src="static/images/inspection/20.png" alt="Image 20" width="60%" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <h2 class="title is-3" id="examples">Qualitative Example</h2>
           <div class="content has-text-centered">
             <p>
               We provide some examples to inspect the behavior of different models on MEGA-bench. The results include both correct and error cases.
