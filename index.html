@@ -215,9 +215,21 @@
     <section class="hero is-light is-small">
       <div class="hero-body has-text-centered">
         <h1 class="title is-1 MMKE">
-          <img src="static/images/MMKE/MMKE-Bench-logo.png" alt="Logo" class="MMKE-logo" style="width: 5%; height: auto; vertical-align: middle;"/> <!-- Adjusted width to 30% and added vertical alignment -->
+          <img src="static/images/MMKE/MMKE-Bench-logo.png" alt="Logo" class="MMKE-logo" style="width: 5%; height: auto; vertical-align: middle;"/>
           <span class="MMKE" style="vertical-align: middle;">MMMKE-Bench</span>
         </h1>
+      </div>
+    </section>
+    
+    <!-- 增加 margin-top 样式来扩大间隙 -->
+    <section class="columns is-centered has-text-centered" style="margin-top: 2rem;"> 
+      <div class="column" style="max-width: 57%; margin: 0 auto;"> <!-- 通过 max-width 限制宽度 -->
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Knowledge editing techniques have emerged as essential tools for updating the factual knowledge of large language models (LLMs) and multimodal models (LMMs), allowing them to correct outdated or inaccurate information without retraining from scratch. However, existing benchmarks for multimodal knowledge editing primarily focus on entity-level knowledge represented as simple triplets, which fail to capture the complexity of real-world multimodal information. To address this issue, we introduce <b>MMKE-Bench</b>, a comprehensive MultiModal Knowledge Editing Benchmark, designed to evaluate the ability of LMMs to edit diverse visual knowledge in real-world scenarios. <b>MMKE-Bench</b> addresses these limitations by incorporating three types of editing tasks: <b>visual entity editing</b>, <b>visual semantic editing</b>, and <b>user-specific editing</b>. Besides, <b>MMKE-Bench</b> uses free-form natural language to represent and edit knowledge, offering a more flexible and effective format. The benchmark consists of <b>2,940</b> pieces of knowledge and <b>7,229</b> images across 110 fine-grained types, with evaluation questions automatically generated and human-verified. We assess five state-of-the-art knowledge editing methods on three prominent LMMs, revealing that no method excels across all criteria, and that visual and user-specific edits are particularly challenging. <b>MMKE-Bench</b> sets a new standard for evaluating the robustness of multimodal knowledge editing techniques, driving progress in this rapidly evolving field.
+          </p>
+        </div>
       </div>
     </section>
     
@@ -1340,47 +1352,44 @@ function applyRomanFontToTable() {
 
    
 
-   <section>
-    <div class="columns is-centered m-6">
-      <div class="column is-full has-text-centered content">
-        <h2 class="title is-3" id="examples">Comparison Of The Existing Benchmark</h2>
-        <div class="content">
-        </div>
-        <div class="columns is-centered">
-          <!-- 左边的PDF图像及图注 -->
-          <div class="column is-half">
-            <div class="box m-5">
-              <div class="content">
-                <img src="static/images/MMKE/blipv1.jpg" alt="BLIP v1 Image" width="60%" />
-                <figcaption style="text-align: justify;">Evaluation comparison of IKE for BLIP2 with existing benchmarks. I-Gen and Port for MMEdit, along with Port for MIKE, is set 1, as they ignore the relevant criteria.</figcaption>
+    <section>
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <h2 class="title is-3" id="examples">Comparison Of The Existing Benchmark</h2>
+          <div class="content"></div>
+          <div class="columns is-centered">
+            <!-- 左边的PDF图像及图注 -->
+            <div class="column is-half">
+              <div class="box m-2 p-3"> <!-- 调整 margin 和 padding 使框更小 -->
+                <div class="content">
+                  <img src="static/images/MMKE/blipv1.jpg" alt="BLIP v1 Image" width="60%" />
+                  <figcaption style="text-align: justify;">Evaluation comparison of IKE for BLIP2 with existing benchmarks. I-Gen and Port for MMEdit, along with Port for MIKE, is set 1, as they ignore the relevant criteria.</figcaption>
+                </div>
               </div>
             </div>
-          </div>
-  
-          <!-- 右边的PDF图像及图注 -->
-          <div class="column is-half">
-            <div class="box m-5">
-              <div class="content">
-                <img src="static/images/MMKE/minigpt4v1.jpg" alt="MiniGPT-4 Image" width="60%" />
-                <figcaption style="text-align: justify;">Evaluation comparison of IKE for MiniGPT-4 with existing benchmarks. I-Gen and Port for MMEdit, along with Port for MIKE, is set 1, as they are not evaluated.</figcaption>
+    
+            <!-- 右边的PDF图像及图注 -->
+            <div class="column is-half">
+              <div class="box m-2 p-3"> <!-- 调整 margin 和 padding 使框更小 -->
+                <div class="content">
+                  <img src="static/images/MMKE/minigpt4v1.jpg" alt="MiniGPT-4 Image" width="60%" />
+                  <figcaption style="text-align: justify;">Evaluation comparison of IKE for MiniGPT-4 with existing benchmarks. I-Gen and Port for MMEdit, along with Port for MIKE, is set 1, as they are not evaluated.</figcaption>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    
 
 
       <!-------------------------------------------------------------------- Concrete  Examples  -------------------------------------------------------------------->
     <section>
       <div class="columns is-centered m-6">
         <div class="column is-full has-text-centered content">
-          <h2 class="title is-3" id="examples">Data Example</h2>
+          <h2 class="title is-3" id="examples">Data Examples</h2>
           <div class="content has-text-centered">
-            <p>
-              We provide some examples to inspect the behavior of different models on MEGA-bench. The results include both correct and error cases.
-            </p>
           </div>
           <div class="carousel results-carousel">
             <!-- 使用循环的方式来生成每个图片框 -->
@@ -1388,102 +1397,77 @@ function applyRomanFontToTable() {
             <!-- 示例：使用伪代码显示 -->
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/1.png" alt="Image 1" width="60%" />
+                <img src="static\images\data_example\data1.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/2.png" alt="Image 2" width="60%" />
+                <img src="static\images\data_example\data2.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/3.png" alt="Image 3" width="60%" />
+                <img src="static\images\data_example\data3.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/4.png" alt="Image 4" width="60%" />
+                <img src="static\images\data_example\data4.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/5.png" alt="Image 5" width="60%" />
+                <img src="static\images\data_example\data5.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/6.png" alt="Image 6" width="60%" />
+                <img src="static\images\data_example\data6.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/7.png" alt="Image 7" width="60%" />
+                <img src="static\images\data_example\data7.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/8.png" alt="Image 8" width="60%" />
+                <img src="static\images\data_example\data8.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/9.png" alt="Image 9" width="60%" />
+                <img src="static\images\data_example\data9.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/10.png" alt="Image 10" width="60%" />
+                <img src="static\images\data_example\data10.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/11.png" alt="Image 11" width="60%" />
+                <img src="static\images\data_example\data11.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/12.png" alt="Image 12" width="60%" />
+                <img src="static\images\data_example\data12.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/13.png" alt="Image 13" width="60%" />
+                <img src="static\images\data_example\data13.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/14.png" alt="Image 14" width="60%" />
+                <img src="static\images\data_example\data14.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/15.png" alt="Image 15" width="60%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/16.png" alt="Image 16" width="60%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/17.png" alt="Image 17" width="60%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/18.png" alt="Image 18" width="60%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/19.png" alt="Image 19" width="60%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/20.png" alt="Image 20" width="60%" />
+                <img src="static\images\data_example\data15.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
           </div>
@@ -1495,11 +1479,8 @@ function applyRomanFontToTable() {
     <section>
       <div class="columns is-centered m-6">
         <div class="column is-full has-text-centered content">
-          <h2 class="title is-3" id="examples">Qualitative Example</h2>
+          <h2 class="title is-3" id="examples">Qualitative Examples</h2>
           <div class="content has-text-centered">
-            <p>
-              We provide some examples to inspect the behavior of different models on MEGA-bench. The results include both correct and error cases.
-            </p>
           </div>
           <div class="carousel results-carousel">
             <!-- 使用循环的方式来生成每个图片框 -->
@@ -1507,105 +1488,79 @@ function applyRomanFontToTable() {
             <!-- 示例：使用伪代码显示 -->
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/1.png" alt="Image 1" width="60%" />
+                <img src="static\images\data_example\data1.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/2.png" alt="Image 2" width="60%" />
+                <img src="static\images\data_example\data2.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/3.png" alt="Image 3" width="60%" />
+                <img src="static\images\data_example\data3.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/4.png" alt="Image 4" width="60%" />
+                <img src="static\images\data_example\data4.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/5.png" alt="Image 5" width="60%" />
+                <img src="static\images\data_example\data5.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/6.png" alt="Image 6" width="60%" />
+                <img src="static\images\data_example\data6.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/7.png" alt="Image 7" width="60%" />
+                <img src="static\images\data_example\data7.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/8.png" alt="Image 8" width="60%" />
+                <img src="static\images\data_example\data8.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/9.png" alt="Image 9" width="60%" />
+                <img src="static\images\data_example\data9.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/10.png" alt="Image 10" width="60%" />
+                <img src="static\images\data_example\data10.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/11.png" alt="Image 11" width="60%" />
+                <img src="static\images\data_example\data11.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/12.png" alt="Image 12" width="60%" />
+                <img src="static\images\data_example\data12.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/13.png" alt="Image 13" width="60%" />
+                <img src="static\images\data_example\data13.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/14.png" alt="Image 14" width="60%" />
+                <img src="static\images\data_example\data14.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static/images/inspection/15.png" alt="Image 15" width="60%" />
+                <img src="static\images\data_example\data15.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/16.png" alt="Image 16" width="60%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/17.png" alt="Image 17" width="60%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/18.png" alt="Image 18" width="60%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/19.png" alt="Image 19" width="60%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static/images/inspection/20.png" alt="Image 20" width="60%" />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
