@@ -391,24 +391,24 @@
 
       .LLaVA-text { 
     color: #72504A; 
-    font-weight: bold; /* 黑色加粗 */
+    font-weight: bold; 
 }
 
       .MiniGPT-text { 
-    color: #3273DE;  /* 修改为蓝色 */
-    font-weight: bold; /* 蓝色加粗 */
+    color: #3273DE;  
+    font-weight: bold;
 }
 
       .BLIP2-text { 
-    color: #B76E79; /* 修改为灰色 */
-    font-weight: bold; /* 灰色加粗 */
+    color: #B76E79; 
+    font-weight: bold; 
 }
 
   </style>
   </head>
   <body>
   
-  <!-- 按钮组 -->
+
   <div class="button-group">
     <button class="button visual-entity-editing" onclick="showentity()">Visual-Entity-Editing</button>
     <button class="button visual-semantic-editing" onclick="showvisual()">Visual-Semantic-Editing</button>
@@ -417,7 +417,7 @@
     <button class="button showall" onclick="showAll()">Show All</button>
   </div>
   
-  <!-- 结果表格 -->
+
   <table id="results-table">
     <thead>
         <tr class="highlight">
@@ -1241,10 +1241,10 @@
   
   <!-- JavaScript -->
   <script>
-    // 默认显示entity-row的内容
+    
     window.onload = function() {
         showentity();
-        applyModelStyles(); // 调用样式应用函数
+        applyModelStyles();
         applyTextAndNumberBoldStyles();
     };
   
@@ -1285,36 +1285,36 @@
   
     function sortTable(colIndex) {
         const table = document.getElementById('results-table');
-        const rows = Array.from(table.rows).slice(1); // 跳过表头
-        const isNumericColumn = colIndex > 2; // 假设数字列从第3列开始
+        const rows = Array.from(table.rows).slice(1); 
+        const isNumericColumn = colIndex > 2; 
   
         rows.sort((rowA, rowB) => {
             const cellA = rowA.cells[colIndex].innerText;
             const cellB = rowB.cells[colIndex].innerText;
             
             return isNumericColumn 
-                ? parseFloat(cellB) - parseFloat(cellA) // 数字列降序排序
-                : cellA.localeCompare(cellB); // 字符串列默认升序排序
+                ? parseFloat(cellB) - parseFloat(cellA) 
+                : cellA.localeCompare(cellB); 
         });
   
-        // 清空表格并重新添加排序后的行
+        
         const tbody = table.querySelector('tbody');
         tbody.innerHTML = '';
         rows.forEach(row => tbody.appendChild(row));
     }
   
-    // 应用样式到指定模型
+
     function applyModelStyles() {
         const rows = document.querySelectorAll('#results-table tbody tr');
         rows.forEach(row => {
-            const modelNameCell = row.cells[0]; // 获取模型名称列
+            const modelNameCell = row.cells[0]; 
   
             if (modelNameCell.innerText === 'LLaVA-1.5') {
-              modelNameCell.classList.add('LLaVA-text'); // 红色应用到整行
+              modelNameCell.classList.add('LLaVA-text'); 
             } else if (modelNameCell.innerText === 'MiniGPT-4') {
-              modelNameCell.classList.add('MiniGPT-text'); // 紫色应用到整行
+              modelNameCell.classList.add('MiniGPT-text'); 
             } else if (modelNameCell.innerText === 'BLIP2-OPT') {
-              modelNameCell.classList.add('BLIP2-text'); // 紫色应用到整行
+              modelNameCell.classList.add('BLIP2-text'); 
             }
         });
     }
@@ -1322,19 +1322,19 @@
     function applyTextAndNumberBoldStyles() {
     const rows = document.querySelectorAll('#results-table tbody tr');
     rows.forEach(row => {
-        // 遍历每一行的所有单元格
+      
         Array.from(row.cells).forEach(cell => {
-            // 使用正则表达式检测单元格中是否包含数字或英文字母
+            
             if (/[a-zA-Z0-9]/.test(cell.innerText)) {
-                cell.style.fontWeight = 'bold'; // 应用加粗样式
+                cell.style.fontWeight = 'bold'; 
             }
         });
     });
 }
-// 应用罗马字体到整个表格
+
 function applyRomanFontToTable() {
-    const table = document.querySelector('#results-table'); // 选择表格
-    table.style.fontFamily = '"Times New Roman", Times, serif'; // 设置字体为罗马字体
+    const table = document.querySelector('#results-table'); 
+    table.style.fontFamily = '"Times New Roman", Times, serif'; 
 }
 
   </script>
@@ -1358,9 +1358,9 @@ function applyRomanFontToTable() {
           <h2 class="title is-3" id="examples">Comparison Of The Existing Benchmark</h2>
           <div class="content"></div>
           <div class="columns is-centered">
-            <!-- 左边的PDF图像及图注 -->
+       
             <div class="column is-half">
-              <div class="box m-2 p-3"> <!-- 调整 margin 和 padding 使框更小 -->
+              <div class="box m-2 p-3"> 
                 <div class="content">
                   <img src="static/images/MMKE/blipv1.jpg" alt="BLIP v1 Image" width="60%" />
                   <figcaption style="text-align: justify;">Evaluation comparison of <b>IKE for BLIP2</b> with existing benchmarks. I-Gen and Port for MMEdit, along with Port for MIKE, is set 1, as they ignore the relevant criteria.</figcaption>
@@ -1368,9 +1368,9 @@ function applyRomanFontToTable() {
               </div>
             </div>
     
-            <!-- 右边的PDF图像及图注 -->
+        
             <div class="column is-half">
-              <div class="box m-2 p-3"> <!-- 调整 margin 和 padding 使框更小 -->
+              <div class="box m-2 p-3"> 
                 <div class="content">
                   <img src="static/images/MMKE/minigpt4v1.jpg" alt="MiniGPT-4 Image" width="60%" />
                   <figcaption style="text-align: justify;">Evaluation comparison of <b>IKE for MiniGPT-4</b> with existing benchmarks. I-Gen and Port for MMEdit, along with Port for MIKE, is set 1, as they are not evaluated.</figcaption>
@@ -1392,9 +1392,7 @@ function applyRomanFontToTable() {
           <div class="content has-text-centered">
           </div>
           <div class="carousel results-carousel">
-            <!-- 使用循环的方式来生成每个图片框 -->
-            <!-- 请确保图片路径正确 -->
-            <!-- 示例：使用伪代码显示 -->
+
             <div class="box m-5">
               <div class="content has-text-centered">
                 <img src="static\images\data_example\data1.jpg" alt="Image 1" width="40%" />
@@ -1483,62 +1481,45 @@ function applyRomanFontToTable() {
           <div class="content has-text-centered">
           </div>
           <div class="carousel results-carousel">
-            <!-- 使用循环的方式来生成每个图片框 -->
-            <!-- 请确保图片路径正确 -->
-            <!-- 示例：使用伪代码显示 -->
+
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static\images\data_example\data1.jpg" alt="Image 1" width="40%" />
+                <img src="static\images\Qualitative_Example\example9.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static\images\data_example\data2.jpg" alt="Image 1" width="40%" />
+                <img src="static\images\Qualitative_Example\example10.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static\images\data_example\data3.jpg" alt="Image 1" width="40%" />
+                <img src="static\images\Qualitative_Example\example11.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static\images\data_example\data4.jpg" alt="Image 1" width="40%" />
+                <img src="static\images\Qualitative_Example\example12.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static\images\data_example\data5.jpg" alt="Image 1" width="40%" />
+                <img src="static\images\Qualitative_Example\example5.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static\images\data_example\data6.jpg" alt="Image 1" width="40%" />
+                <img src="static\images\Qualitative_Example\example6.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static\images\data_example\data7.jpg" alt="Image 1" width="40%" />
+                <img src="static\images\Qualitative_Example\example7.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
               <div class="content has-text-centered">
-                <img src="static\images\data_example\data8.jpg" alt="Image 1" width="40%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static\images\data_example\data9.jpg" alt="Image 1" width="40%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static\images\data_example\data10.jpg" alt="Image 1" width="40%" />
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="content has-text-centered">
-                <img src="static\images\data_example\data11.jpg" alt="Image 1" width="40%" />
+                <img src="static\images\Qualitative_Example\example8.jpg" alt="Image 1" width="40%" />
               </div>
             </div>
             <div class="box m-5">
